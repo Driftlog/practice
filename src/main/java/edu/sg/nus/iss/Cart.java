@@ -32,15 +32,15 @@ public class Cart {
             }
 
             if (input.contains("add")) {
-                String items = input.substring(5);
+                String items = input.substring(4);
                 String[] itemz = items.split(",");
                 for (String item : itemz) {
-                    this.cart.add(item);
+                    this.cart.add(item.trim());
                 }
             }
 
             if (input.contains("delete")) {
-                String index = input.substring(8);
+                String index = input.substring(7);
                 int deleteIndex = Integer.parseInt(index);
                 if (this.cart.size() > deleteIndex) {
                     this.cart.remove(deleteIndex);
